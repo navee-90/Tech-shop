@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(52, 51, 51);
+}
+
+body {
+    width: 100%;
+}
+
+body::before {
+    content: "In Ear";
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    /* Adjust size as needed */
+    color: white;
+    /* Semi-transparent color */
+    white-space: nowrap;
+    z-index: 1;
+    /* Pushes the text behind other content */
+    pointer-events: none;
+    /* Prevents text from being selectable */
+    opacity: 0.2;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    font-size: 20px;
+    z-index: 1;
+    padding: 10px;
+}
+
+h3>a {
+    color: white;
+    padding-left: 0;
+    padding-top: 5px;
+    text-decoration: none;
+
+}
+
+h3>#barn>i {
+    text-decoration: none;
+    background-color: rgb(52, 51, 51);
+
+}
+
+h3>#barn>i:hover {
+    color: green;
+}
+
+h3>#barn2>i {
+    text-decoration: none;
+    background-color: rgb(52, 51, 51);
+
+}
+
+h3>#barn2>i:hover {
+    color: green;
+}
+
+h3>i {
+    color: white;
+    float: right;
+    justify-content: space-evenly;
+    letter-spacing: 60px;
+
+    align-items: center;
+
+}
+
+.item-1 {
+    color: white;
+    padding: 50px;
+    display: block;
+
+}
+
+.item-1>img {
+    float: right;
+    padding-right: 650px;
+}
+
+.content {
+    padding-left: 400px;
+    display: block;
+}
+
+.content>.rates {
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.btn-1 {
+    width: 50%;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.content .rates>span {
+    background-color: gray;
+    color: white;
+}
+
+/* banner section */
+.Section01 {
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(52, 51, 51);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    border: 0.1 solid black;
+    z-index: 3;
+
+}
+
+.Section01-text {
+    text-align: left;
+    flex: 1;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.Section01-text h4 {
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    margin-left: 10px;
+
+}
+
+.Section01-text p {
+
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    margin-top: -10px;
+}
+
+.Section01-text-image img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-top: -400px;
+    margin-left: 650px;
+
+}
+
+.prices-txt {
+    margin-top: -40px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.original-price {
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+
+
+}
+
+.offer-price {
+    text-align: center;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+
+
+}
+
+.button {
+    display: flex;
+    font-size: large;
+    color: rgb(19, 3, 3);
+    border-radius: 1px;
+    width: 85px;
+
+}
+
+.my-button {
+    width: 150px;
+    height: auto;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: left;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-left: -10px;
+
+
+}
+
+/* Dots container */
+.dots {
+    text-align: center;
+    position: absolute;
+    top: 600px;
+
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Style for each dot */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s;
+}
+
+/* Active dot styling for each step of the animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-100%);
+    }
+
+    66.66% {
+        transform: translateX(-200%);
+    }
+
+    66.66% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Dot animations in sync with the slides */
+@keyframes dot-active {
+
+    0%,
+    33.33% {
+        background-color: red;
+    }
+
+    33.34%,
+    66.66% {
+        background-color: #bbb;
+    }
+}
+
+/* Active state for each dot based on animation timing */
+.dot:nth-child(1) {
+    animation: dot-active 12s infinite 1s;
+}
+
+.dot:nth-child(2) {
+    animation: dot-active 12s infinite 8s;
+}
+
+.dot:nth-child(3) {
+    animation: dot-active 12s infinite;
+}
+
+.item1 {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+/* featured products */
+.start-box {
+    text-align: center;
+    color: white;
+    width: 100%;
+
+}
+
+.start-box>h2 {
+    margin-top: 120px;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
+/* image */
+.jbl {
+    color: white;
+    background-color: rgb(52, 51, 51);
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+
+
+.jbl-headset {
+    position: relative;
+    /* Positioning context for scaling */
+    /* Full width */
+    overflow: visible;
+    /* Hide overflow */
+}
+.boatjbl{
+    z-index: 1;
+
+}
+
+.gallery {
+    display: flex;
+    animation: scroll 60s infinite;
+    /* Scroll animation */
+    /* column-gap: 20px; */
+    justify-content: space-around;
+
+}
+
+.jbl {
+    position: relative;
+    /* Positioning context for overlay */
+    flex: 0 0 auto;
+    /* Prevents images from shrinking */
+    margin: 0 10px;
+    /* Space between images */
+    transition: transform 0.8s;
+    /* Smooth scaling effect */
+}
+
+/* Images */
+.jbl img {
+    border-radius: 8px;
+    /* Optional: rounded corners */
+    display: block;
+    /* Removes bottom space from images */
+}
+
+/* Text overlay styles */
+.text {
+    position: relative;
+    /* Positioning the text over the image */
+    bottom: 0px;
+    /* Position from the bottom */
+    left: 10px;
+    /* Position from the left */
+    color: white;
+    /* Text color */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 5px;
+    /* Padding around the text */
+    border-radius: 5px;
+    /* Rounded corners for text background */
+}
+
+/* Keyframes for scroll animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    50% {
+        transform: scale(1, 2);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* End position */
+    }
+}
+
+/* Scale effect for the centered image */
+@keyframes scale:nth-child(even) {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.1);
+    }
+
+    /* Scale up */
+    30% {
+        transform: scale(1);
+    }
+
+    /* Scale back to normal */
+    50% {
+        transform: scale(1, 4);
+    }
+
+    80% {
+        transform: scale(1, 2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply scale effect to the items based on their position */
+.gallery-item:nth-child(1) {
+    animation: scale 12s linear infinite;
+    animation-delay: 0s;
+}
+
+.gallery-item:nth-child(2) {
+    animation: scale 12s linear infinite;
+    animation-delay: 0s;
+}
+
+.gallery-item:nth-child(3) {
+    animation: scale 12s linear infinite;
+    animation-delay: 15s;
+}
+
+.gallery-item:nth-child(4) {
+    animation: scale 12s linear infinite;
+    animation-delay: 2s;
+}
+
+.gallery-item:nth-child(5) {
+    animation: scale 12s linear infinite;
+    animation-delay: 2s;
+}
+
+.gallery-item:nth-child(6) {
+    animation: scale 12s linear infinite;
+    animation-delay: 2s;
+}
+
+/* dots next card */
+/* Top products */
+.start1-box {
+    text-align: center;
+    color: white;
+    width: 100%;
+
+}
+
+.start1-box>h2 {
+    margin-top: 120px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+/*nav1 style */
+.nav1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    /*  padding: 2rem 2rem; */
+    padding: 2rem 0rem;
+    position: static;
+}
+
+
+/* Navigation links styling */
+nav .nav-links {
+    list-style-type: none;
+    display: flex;
+
+}
+
+nav .nav-links li {
+    margin-left: 6rem;
+
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.li1 a {
+    color: white;
+    background-color: red;
+    border: 1px solid;
+    padding: 10px;
+}
+
+
+/* Hover effect for links */
+nav .nav-links a:hover {
+    color: white;
+}
+
+/* Responsive menu (for smaller screens)*/
+
+@media (max-width: 768px) {
+    .nav1 .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    nav .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+}
+
+/* images */
+#img-flex {
+    width: 15%;
+    height: 250px;
+    margin-left: 10px;
+    border: 1px solid white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+.star small>i {
+    /* color: white; */
+    background-color: red;
+    border-radius: 80px;
+    border-style: hidden;
+}
+
+.star>h3 {
+    color: white;
+    opacity: 0.9;
+}
+
+.wire {
+    color: white;
+    opacity: 0.8;
+}
+
+.add {
+    margin: 10px;
+    padding: 7px 15px;
+    color: white;
+    background-color: red;
+}
+
+.flex-m1 {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* heading */
+.h2 {
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    margin: 50px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+/* delivery */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Full height for demo */
+}
+
+.content {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: white;
+    opacity: 0.8;
+}
+
+.brands {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+}
+
+/* footer above */
+.ftr {
+    background-color: black;
+}
+
+.ftr1 {
+    width: 25%;
+    height: 250px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.ftr1>h3 {
+    background-color: black;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.ftr1>p {
+    background-color: black;
+    padding-bottom: 20px;
+    opacity: 0.7;
+
+}
+
+input {
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    color: white;
+    background-color: red;
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* all div tag bg black footer above object */
+.ftr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1rem 2rem;
+    padding-bottom: 9%;
+}
+
+/* footer */
+footer {
+
+    padding-bottom: 20px;
+    color: white;
+    background-color: black;
+    border-top-style: 1px solid;
+
+}
+
+.footer-bottom p {
+    background-color: black;
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    opacity: 0.8;
+
+}
+
+.footer-bottom>a {
+    background-color: black;
+    color: white;
+}
+
+a>i {
+    color: white;
+    background-color: black;
+    float: right;
+    justify-content: center;
+    letter-spacing: 30px;
+    align-items: center;
+    /* padding-bottom: 5px; */
+
+}
+
+/* hover */
+a>i:hover {
+    color: red;
+    background-color: black;
+
+
+}
+
+/* p tag hover footer above div */
+.h1:hover {
+    color: red;
+}

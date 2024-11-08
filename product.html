@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-shop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(52, 51, 51);
+        }
+
+        body {
+            width: 100%;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            padding-bottom: 10px;
+            font-size: 22px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            z-index: 1;
+        }
+
+        h3>a {
+            color: white;
+            padding-left: 5px;
+            padding-top: 5px;
+            text-decoration: none;
+        }
+
+        h3>i {
+            color: white;
+            float: right;
+            justify-content: space-evenly;
+            letter-spacing: 40px;
+            align-items: center;
+
+        }
+
+        h3>#barn2>i {
+            text-decoration: none;
+            background-color: rgb(52, 51, 51);
+
+        }
+
+        h3>#barn2>i:hover {
+            color: green;
+        }
+
+        .productimages img {
+            height: 80px;
+            width: 80px;
+            border: 1px solid rgb(242, 238, 238);
+
+
+        }
+
+        .product1 img {
+            height: 500px;
+            width: 500px;
+        }
+
+        .productimages {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .productcontainer {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .productdetails {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .productdetails hr {
+            margin-top: 30px;
+        }
+
+        .productdetails p {
+            font-size: larger;
+        }
+
+        .detailspart1 h1 {
+            color: white;
+        }
+
+        .detailspart1 p {
+            color: white;
+        }
+
+        .detailspart1 spam {
+            color: white;
+        }
+
+        .detailspart1 spam i {
+            color: red;
+        }
+
+        .detailspart2 spam {
+            font-size: x-large;
+            color: white;
+
+        }
+
+        .detailspart2 div p {
+            color: green;
+            margin-top: 20px;
+        }
+
+        .detailspart2 div button {
+            width: 100px;
+            color: white;
+            background-color: green;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 4px;
+            box-shadow: none;
+            border: 1px green;
+        }
+
+        .detailspart2 spam s {
+            font-size: small;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .detailspart2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .detailspart2 div p {
+            font-size: small;
+            margin-bottom: 20px;
+        }
+
+        .productdetails span {
+            color: white;
+        }
+
+        .productdetails span i {
+            color: red;
+        }
+
+        .detailspart3 hr {
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+
+        .detailspart3 p {
+            color: aliceblue;
+            font-size: large;
+        }
+
+        .detailspart3 button {
+            width: 190px;
+            height: 50px;
+            background-color: #1e2021;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-radius: 4px;
+            box-shadow: none;
+            border: 1px solid white;
+            color: darkgray;
+            font-size: medium;
+
+        }
+
+        .detailspart3 .buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .detailspart4 hr {
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+
+        .detailspart4 button {
+            width: 210px;
+            height: 35px;
+            background-color: red;
+            border-radius: 4px;
+            box-shadow: none;
+            color: white;
+            font-size: medium;
+            border: 1px white;
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+
+        .productsummary {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 300px;
+            gap: 60px;
+            background-color: black;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: white;
+            font-size: 25px;
+            /* width: 100%; */
+            border-radius: 10px;
+
+
+        }
+
+        .productsummary h3:hover {
+            color: white;
+            background-color: green;
+            border-radius: 2px;
+            margin-top: 5px;
+        }
+
+        .productsummary #h3 {
+            color: white;
+            background-color: red;
+            border-radius: 2px;
+            margin-top: 5px;
+        }
+
+
+        .specificationspart1 p {
+            color: white;
+            font-size: 20px;
+            opacity: 0.7;
+
+
+        }
+
+        .specificationspart2 p {
+            color: white;
+            font-size: 23px;
+
+        }
+
+        .details {
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+            margin-top: 5px;
+            column-gap: 200px;
+            background-color: rgb(52, 51, 51);
+            color: white;
+            padding: 10px;
+
+        }
+
+        .specificationspart1 {
+            display: flex;
+            flex-direction: column;
+            row-gap: 34px;
+            position: static;
+            background-color: rgb(52, 51, 51);
+        }
+
+        .specificationspart2 {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            position: static;
+            background-color: rgb(52, 51, 51);
+        }
+
+        /* products */
+        .start1-box {
+            text-align: center;
+            color: white;
+            width: 100%;
+
+
+        }
+
+        .start1-box>h2 {
+
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 70px;
+
+        }
+
+        .flex-m1 {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+
+        }
+
+        #img-flex {
+            width: 15%;
+            height: 250px;
+            margin-left: 10px;
+            border: 1px solid white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .star>h3 {
+            color: white;
+            opacity: 0.8;
+        }
+
+        .star>p {
+            color: white;
+            opacity: 0.5;
+        }
+
+        .text {
+            padding-top: 10px;
+            color: white;
+        }
+
+        .star>small>i {
+            color: #1e2021;
+            background-color: red;
+            border-radius: 5px;
+        }
+
+        .star>h3> {
+            color: white;
+        }
+
+        /* heading */
+        .h2 {
+            color: white;
+            text-align: center;
+            opacity: 0.7;
+            margin: 50px;
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+
+        /* delivery */
+        .container {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            /* Full height for demo */
+            margin-left: 10px;
+            margin-top: 40px;
+        }
+
+        .content {
+
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 60px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .brands {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem 2rem;
+            padding-bottom: 9%;
+        }
+
+        /* footer above */
+        .ftr {
+            background-color: black;
+        }
+
+        .ftr1 {
+            width: 25%;
+            height: 250px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .ftr1>h3 {
+            background-color: black;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .ftr1>p {
+            background-color: black;
+            padding-bottom: 20px;
+            opacity: 0.7;
+
+        }
+
+        input {
+            background-color: black;
+            color: white;
+            opacity: 0.7;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            color: white;
+            background-color: red;
+            padding: 6px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* all div tag bg black footer above object */
+        .ftr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 1rem 2rem;
+            padding-bottom: 9%;
+        }
+
+        /* footer */
+        footer {
+
+            padding-bottom: 20px;
+            color: white;
+            background-color: black;
+            border-top-style: 1px solid;
+
+        }
+
+        .footer-bottom p {
+            background-color: black;
+            color: white;
+            padding-left: 5px;
+            padding-top: 5px;
+            opacity: 0.8;
+
+        }
+
+        .footer-bottom>a {
+            background-color: black;
+            color: white;
+        }
+
+        a>i {
+            color: white;
+            background-color: black;
+            float: right;
+            justify-content: center;
+            letter-spacing: 30px;
+            align-items: center;
+            /* padding-bottom: 5px; */
+
+        }
+
+        /* hover */
+        a>i:hover {
+            color: red;
+            background-color: black;
+
+
+        }
+
+        /* p tag hover footer above div */
+        .h1:hover {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<div style="background-color: black;">
+    <!-- header start here-->
+    <nav>
+        <div>
+            <h3><a href="./index.html">Tech-Shop</a>
+                <a href="./signpage.html" id="barn2"><i class="fa-solid fa-user-large" class="call-1"></i></a>
+                <i class="fa-solid fa-cart-plus" style="color: red;"></i>
+                <i class="fa-solid fa-magnifying-glass" class="call-1"></i>
+            </h3>
+        </div>
+    </nav>
+
+
+    <!--navbar ends here  -->
+
+    <!-- header ends here-->
+    <!-- product start  here -->
+    <div class="productcontainer">
+        <div class="productimages">
+            <img src="./products/jbl660nc-1.png" alt=" jbl live-1">
+            <img src="./products/jbl660nc-2.png" alt=" jbl live-2">
+            <img src="./products/jbl660nc-3.png" alt=" jbl live-3">
+            <img src="./products/jbl660nc-4.png" alt=" jbl live-4">
+        </div>
+        <div class="product1"><img src="./products/jbl660nc-1.png" alt="jbl live660NC " width="320" height="350"></div>
+        <div class="productdetails">
+            <div class="detailspart1">
+                <h1>JBL Live 660NC</h1>
+                <p>Wireless Over-Ear NC Headphones</p>
+                <span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    | 1234Ratings
+                </span>
+
+
+                <hr>
+
+            </div>
+            <div class="detailspart2">
+                <div class="divpart2-1">
+                    <span>₹9,999&emsp; <del>₹14,999</del></span>
+                    <div>
+                        <p>you save:₹5,000(33%)</p>
+                    </div>
+
+
+                    <span>
+                        <p>(inclusive of all taxes)</p>
+                    </span>
+
+                </div>
+                <div class="divpart2-2">
+                    <button> ✔ In Stock</button>
+                </div>
+
+
+            </div>
+
+            <div class="detailspart3">
+                <hr>
+
+
+                <p>Offers and Discounts</p>
+                <div class="buttons">
+                    <div class="button1">
+                        <button>No Cost EMI on Credit Card</button>
+                    </div>
+                    <div class="button2">
+                        <button>Pay Later & Avail Cashback</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="detailspart4">
+                <hr>
+
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <!-- product ends   here -->
+    </div>
+    <!-- specifications start here -->
+    <div class="productsummary">
+        <h3 id="h3">Specifications</h3>
+        <h3>Overview</h3>
+        <h3>Reviews</h3>
+    </div>
+    <!-- specifications start here -->
+    <!-- specifications details start here -->
+    <div class="details">
+        <div class="specificationspart1">
+            <p>Brand</p>
+            <p>Model</p>
+            <p>Generic Name</p>
+            <p>Headphone Type</p>
+            <p>Connectivity</p>
+            <p>Microphone</p>
+        </div>
+        <div class="specificationspart2">
+            <p>JBL</p>
+            <p>JBL Live 660NC</p>
+            <p>Headphones</p>
+            <p>Over Ear</p>
+            <p>Wireless</p>
+            <p>Yes</p>
+        </div>
+    </div>
+    <!-- Related products -->
+    <div class="start1-box">
+        <h2>Related Products</h2>
+    </div>
+    <!-- specifications details ends here -->
+    <div class="flex-m1">
+        <!-- start image flex -->
+
+        <div id="img-flex">
+            <div id="containers1">
+                <div>
+                    <img src="./products/jbl660nc-1.png" width="100" height="100">
+                </div>
+                <div class="star"><small><i class="fa-regular fa-star" width="6" height="5"></i>&nbsp;<i
+                            class="fa-regular fa-star" width="6" height="5"></i>
+                        <i class="fa-regular fa-star" width="6" height="5"></i>
+                        <i class="fa-regular fa-star" width="6" height="5"></i>
+                        <i class="fa-regular fa-star" width="6" height="5"></i></small>
+                    <h3>JBL Live 660NC</h3>
+                    <p class="wire">wireless Over-Ear NC Headpones</p>
+                </div>
+                <div class="text"><i class="fa-solid fa-indian-rupee-sign">9,999</i>&emsp;<del> <i
+                            class="fa-solid fa-indian-rupee-sign"></i>14,999</del></div>
+                <button class="add">Add to cart</button>
+            </div>
+        </div>
+        <div id="img-flex">
+            <div>
+                <img src="./products/boat518-1.png" width="100" height="100">
+            </div>
+            <div class="star"><small><i class="fa-regular fa-star" width="6" height="5"></i>&nbsp;<i
+                        class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i></small>
+                <h3>boat rockerz 518</h3>
+                <p class="wire">On-Ear Wireless Headpones</p>
+            </div>
+            <div class="text"><i class="fa-solid fa-indian-rupee-sign">1,299</i>&emsp;<del> <i
+                        class="fa-solid fa-indian-rupee-sign"></i>3,990</del></div>
+            <button class="add">Add to cart</button>
+        </div>
+        <div id="img-flex">
+            <div>
+                <img src="./products/boat131-1.png" width="100" height="100">
+            </div>
+            <div class="star"><small><i class="fa-regular fa-star" width="6" height="5"></i>&nbsp;<i
+                        class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i></small>
+                <h3>boAt Airdopes 131</h3>
+                <p class="wire">wireless In-Ear Earbuds</p>
+            </div>
+            <div class="text"><i class="fa-solid fa-indian-rupee-sign">1,099</i>&emsp;<del> <i
+                        class="fa-solid fa-indian-rupee-sign"></i>2,990</del></div>
+            <button class="add">Add to cart</button>
+        </div>
+        <div id="img-flex">
+            <div>
+                <img src="./products/boat110-1.png" width="100" height="100">
+            </div>
+            <div class="star"><small><i class="fa-regular fa-star" width="6" height="5"></i>&nbsp;<i
+                        class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i></small>
+                <h3>boAt bassHeads 110</h3>
+                <p class="wire">In-Ear Earpones</p>
+            </div>
+            <div class="text"><i class="fa-solid fa-indian-rupee-sign">449</i>&emsp;<del> <i
+                        class="fa-solid fa-indian-rupee-sign"></i>999</del></div>
+            <button class="add">Add to cart</button>
+        </div>
+        <div id="img-flex">
+            <div>
+                <img src="./products/boat410-1.png" width="100" height="100">
+            </div>
+            <div class="star"><small><i class="fa-regular fa-star" width="6" height="5"></i>&nbsp;<i
+                        class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i>
+                    <i class="fa-regular fa-star" width="6" height="5"></i></small>
+                <h3>boAt Rockerz 410</h3>
+                <p class="wire">Bluetooth & Wired On-Ear Headphones</p>
+            </div>
+            <div class="text"><i class="fa-solid fa-indian-rupee-sign">1,599</i>&emsp;<del> <i
+                        class="fa-solid fa-indian-rupee-sign"></i>2,990</del></div>
+            <button class="add">Add to cart</button>
+        </div>
+        <!-- end flex image -->
+    </div>
+    <!-- start middle part -->
+    <!-- another start footer above -->
+    <div class="start1-box hello1">
+        <h2>Our Advantages</h2>
+    </div>
+    <!-- requires -->
+    <div class="brands">
+        <div class="container">
+            <div class="delivery">
+                <i class="fa-solid fa-truck fa-xl" style="color:red; width:30px;height:50px;" class="i1"></i>
+            </div>
+            <div class="content">
+                <h2>Express Delivery</h2>
+                <p> Ships in 24 Hours</p>
+            </div>
+        </div>
+        <!-- brand worranty -->
+        <div class="container">
+            <div class="delivery">
+                <i class="fa-solid fa-shield-halved fa-xl" style="color:red; width:30px;height:50px;" class="i1"></i>
+            </div>
+            <div class="content">
+                <h2>Brand Warranty</h2>
+                <p>100% Original products</p>
+            </div>
+        </div>
+        <!-- deals -->
+        <div class="container">
+            <div class="delivery">
+                <i class="fa-solid fa-tag fa-xl" style="color:red; width:30px;height:50px;" class="i1"></i>
+            </div>
+            <div class="content">
+                <h2>Exciting Deals</h2>
+                <p>on all prepaid orders</p>
+            </div>
+        </div>
+        <!-- secure payments -->
+        <!-- brand worranty -->
+        <div class="container">
+            <div class="delivery">
+                <i class="fa-solid fa-credit-card fa-xl" style="color:red; width:30px;height:50px;" class="i1"></i>
+            </div>
+            <div class="content">
+                <h2>Secure Payments</h2>
+                <p>SSL/Secure certificate</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer  above-->
+
+    <div class="ftr">
+        <!-- start tag for all  -->
+        <div class="ftr1">
+            <h3>Tech-Shop</h3>
+            <p class="bl">Subscribe to our Email alerts to receive early discount offers, and new products info.</p>
+            <input type="email" placeholder="     Email Address">
+            <p id="b2"><button class="btn1" style="background-color: red;">Subscribe</button></p>
+        </div>
+        <!-- help -->
+
+        <div class="ftr1">
+            <h3>Help</h3>
+            <p class="h1">FAQs</p>
+            <p class="h1">Track Order</p>
+            <p class="h1">Cancel Order</p>
+            <p class="h1">Return order</p>
+            <p class="h1">Warranty Info</p>
+        </div>
+        <!-- policies -->
+        <div class="ftr1">
+            <h3>Policies</h3>
+            <p class="h1">Return Policy</p>
+            <p class="h1">Security</p>
+            <p class="h1">Sitemap</p>
+            <p class="h1">Privacy Policy</p>
+            <p class="h1">Terms & Conditions</p>
+        </div>
+        <!-- Company -->
+        <div class="ftr1">
+            <h3>Company</h3>
+            <p class="h1">About Us</p>
+            <p class="h1">Contact Us</p>
+            <p class="h1">Service Centres</p>
+            <p class="h1">Careers</p>
+            <p class="h1">Affiliates</p>
+        </div>
+        <!-- footer above end bellow div tag -->
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024|All Rights Reserved. Built by |R NAVEEN
+
+                <a href="#facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </p>
+
+        </div>
+    </footer>
+    </body>
+
+</html>

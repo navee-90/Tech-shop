@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* Basic reset for margins and padding */
+        * {
+            margin-bottom: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the body and center the container */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: rgb(52, 51, 51);
+        }
+
+        /* Style the container */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 70px;
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 630px;
+            margin-top: 30px;
+            margin-bottom: 80px;
+
+        }
+
+        /* Style the heading */
+        .container h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Style the form elements */
+        form label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        pre {
+            padding-bottom: 20px;
+
+        }
+
+        .socialmedia #facebook {
+            padding: 5px;
+            background-color: rgb(98, 98, 206);
+            text-decoration: none;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .socialmedia #google {
+            padding: 5px;
+            background-color: orangered;
+            text-decoration: none;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .socialmedia #twitter {
+            padding: 5px;
+            background-color: rgb(27, 128, 175);
+            text-decoration: none;
+            color: white;
+            border-radius: 4px;
+        }
+
+        #signin {
+            color: white;
+            background-color: red;
+            border-radius: 4px;
+        }
+
+        #back {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            position: absolute;
+            top: 410px;
+            left: 1040px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 5px 5px blue;
+            text-shadow: 2px 1px 4px;
+
+        }
+
+        #back:hover {
+            color: white;
+            background-color: rgb(23, 160, 23);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Welcome to Tech-Shop</h2>
+    <div class="container">
+        <h2>Signup</h2>
+        <P>Already have an account ? <span>Login</span></P>
+        <!-- <p>Already have an account ? <span>Login</span> </p> -->
+        <form>
+            <label for="username"></label>
+            <input type="text" id="username" name="username" required placeholder="Username">
+
+            <label for="Email"></label>
+            <input type="Email" id="Email" name="Email" required placeholder="Email">
+
+            <label for="Confirm password"></label>
+            <input type="password" id="password" name=" Confirm password" required placeholder="Password">
+            <label for="password"></label>
+            <input type="password" id="password" name="password" required placeholder="Confirm Password">
+
+            <button type="submit">Signup</button><br><br>
+            <pre>___________Or Login With__________</pre>
+            <div class="socialmedia">
+                <a href="#" id="facebook">Facebook</a>&emsp;<a href="#" id=google>Google</a>&emsp;<a href="#Twitter"
+                    id="twitter">Twitter</a>
+            </div><br><br>
+            <button type="submit" id="signin">Sign In</button><br>
+        </form>
+
+    </div>
+    <a href="./index.html" id="back">
+        <h2>Back to Home</h2>
+    </a>
+</body>
+
+</html>
